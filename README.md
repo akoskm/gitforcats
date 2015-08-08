@@ -1,2 +1,2 @@
 # applied-git
-Short, interactive git workflow tutorials.
+Basic git workflow tutorials.
