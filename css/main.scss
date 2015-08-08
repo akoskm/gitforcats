@@ -27,7 +27,8 @@ $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
-
+// card size
+$card-height:      200px;
 
 // Using media queries with like this:
 // @include media-query($on-palm) {
@@ -53,24 +54,27 @@ $on-laptop:        800px;
 
 .save-card-square, .update-card-square, .share-card-square {
   &.mdl-card {
-    width: 320px;
-    height: 320px;
+    // width: 320px;
+    margin: 5px;
+  }
+
+  .mdl-card__title {
+    height: $card-height;
+    max-height: $card-height;
+    color: #fff;
   }
 }
 .save-card-square > .mdl-card__title {
-  color: #fff;
   background:
     url('../assets/images/commit-resized.png') bottom right 15% no-repeat #46B6AC;
 }
 
 .update-card-square > .mdl-card__title {
-  color: #fff;
   background:
     url('../assets/images/push-resized.png') bottom right 15% no-repeat #46B6AC;
 }
 
 .share-card-square > .mdl-card__title {
-  color: #fff;
   background:
     url('../assets/images/push-resized.png') bottom right 15% no-repeat #46B6AC;
 }
