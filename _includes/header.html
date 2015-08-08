@@ -14,15 +14,11 @@
       </a>
 
       <div class="trigger">
-        <!-- {% for page in site.pages %}
+        {% for page in site.pages %}
           {% if page.title %}
           <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
           {% endif %}
-        {% endfor %} -->
-        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
-          <input type="checkbox" id="switch-1" class="mdl-switch__input" />
-          <span class="mdl-switch__label">Do you speak git?</span>
-        </label>
+        {% endfor %}
       </div>
     </nav>
 

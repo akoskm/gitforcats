@@ -51,14 +51,28 @@ $on-laptop:        800px;
         "syntax-highlighting"
 ;
 
-.demo-card-square.mdl-card {
+.save-card-square, .update-card-square, .share-card-square {
+  &.mdl-card {
     width: 320px;
     height: 320px;
+  }
 }
-.demo-card-square > .mdl-card__title {
+.save-card-square > .mdl-card__title {
   color: #fff;
   background:
-    url('../assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;
+    url('../assets/images/commit-resized.png') bottom right 15% no-repeat #46B6AC;
+}
+
+.update-card-square > .mdl-card__title {
+  color: #fff;
+  background:
+    url('../assets/images/push-resized.png') bottom right 15% no-repeat #46B6AC;
+}
+
+.share-card-square > .mdl-card__title {
+  color: #fff;
+  background:
+    url('../assets/images/push-resized.png') bottom right 15% no-repeat #46B6AC;
 }
 
 .cards-container {

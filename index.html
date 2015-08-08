@@ -4,49 +4,50 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Where you are</h1>
-
-  <!-- <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul> -->
+  <h1 class="page-heading">I want to:</h1>
 
   <div class="cards-container">
     <div class="card-container">
-      <div class="mdl-card mdl-shadow--2dp demo-card-square">
+      <div class="mdl-card mdl-shadow--2dp save-card-square">
         <div class="mdl-card__title mdl-card--expand">
-          <h2 class="mdl-card__title-text">Saving</h2>
+          <h2 class="mdl-card__title-text">Record</h2>
         </div>
         <div class="mdl-card__supporting-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Aenan convallis.
+          Save the changes in your repository in a new commit along with a log message describing the changes.
         </div>
         <div class="mdl-card__actions mdl-card--border">
           <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            View Updates
+            Show me how
           </a>
         </div>
       </div>
     </div>
     <div class="card-container">
-      <div class="mdl-card mdl-shadow--2dp demo-card-square">
+      <div class="mdl-card mdl-shadow--2dp update-card-square">
         <div class="mdl-card__title mdl-card--expand">
-          <h2 class="mdl-card__title-text">Publishing</h2>
+          <h2 class="mdl-card__title-text">Update</h2>
         </div>
         <div class="mdl-card__supporting-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Aenan convallis.
+          Communicates with a remote repository and fetches down all new information and store it. It requires write access to the other repository.
         </div>
         <div class="mdl-card__actions mdl-card--border">
           <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            View Updates
+            Show me how
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="card-container">
+      <div class="mdl-card mdl-shadow--2dp share-card-square">
+        <div class="mdl-card__title mdl-card--expand">
+          <h2 class="mdl-card__title-text">Share</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+          Share your changes with a remote repository. It requires write access to the other repository and so normally is authenticated somehow.
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            Show me how
           </a>
         </div>
       </div>
