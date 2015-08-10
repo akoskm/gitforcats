@@ -2,55 +2,63 @@
 layout: default
 ---
 
-<div class="home">
+  <div class="details">
+    <h1>Basics:</h1>
 
-  <h1 class="page-heading">I want to:</h1>
+    <p>git workflows can be divided into these categories:</p>
 
-  <div class="cards-container mdl-grid">
-      <div class="mdl-card mdl-shadow--2dp mdl-cell--4-col save-card-square">
-        <div class="mdl-card__title mdl-card--expand">
-          <h2 class="mdl-card__title-text">Record</h2>
-        </div>
-        <div class="mdl-card__supporting-text">
-          Save the changes in your repository in a new commit along with a log message describing the changes.
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            Show me how
-          </a>
-        </div>
-      </div>
+    <ul>
+      <li><a href="#recording">Recording</a> - save the changes in your repository in a new commit along with a log message describing the changes.</li>
+      <li><a href="#updating">Updating</a> - communicate with a remote repository, fetch down all new information and store it.</li>
+      <li><a href="#sharing">Sharing</a> - upload your changes with to a remote repository.</li>
+    </ul>
 
-      <div class="mdl-card mdl-shadow--2dp mdl-cell--4-col update-card-square">
-        <div class="mdl-card__title mdl-card--expand">
-          <h2 class="mdl-card__title-text">Update</h2>
-        </div>
-        <div class="mdl-card__supporting-text">
-          Communicates with a remote repository and fetches down all new information and store it. It requires write access to the other repository.
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            Show me how
-          </a>
-        </div>
-      </div>
+    <p>If you don't have access to any git repository you create a fresh one to play around with. Open up the terminal and create a new directory:</p>
 
-      <div class="mdl-card mdl-shadow--2dp mdl-cell--4-col share-card-square">
-        <div class="mdl-card__title mdl-card--expand">
-          <h2 class="mdl-card__title-text">Share</h2>
-        </div>
-        <div class="mdl-card__supporting-text">
-          Share your changes with a remote repository. It requires write access to the other repository and so normally is authenticated somehow.
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            Show me how
-          </a>
-        </div>
-      </div>
-    </div>
+    <pre>mkdir cats</pre>
+
+    <p>after entering</p>
+
+    <pre>cd cats</pre>
+
+    <p>initialize a new git repository:</p>
+
+    <pre>git init</pre>
+
+    <p>As simple as that!</p>
+
+    <img src="images/gifs/init.gif" alt="git init"></img>
   </div>
 
-  <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
+  <a class="anchor" href name="recording"></a>
+  <h1>Recording changes</h1>
 
-</div>
+  <div class="details">
+    <p>Time to make some changes! Let's say you changed a webpage. Typing git status will always show you the current status of your working directory.</p>
+    <pre>git status</pre>
+  </div>
+
+
+  <div class="details">
+    <p>As you see git already knows that index.html is changed. Let's save your modifications!</p>
+    <p>In order to save modifications you have to create a commit. Putting together a git commit is just like shopping. You decide what goes into your shopping basked and what doesn't.</p>
+    <p>Use <code>git add</code> to put a changed file into your commit:</p>
+  </div>
+
+  <pre>git add index.html</pre>
+
+  <div class="details">
+    <p>The commit is wrapper and now we are ready to record the selected changes.</p>
+  </div>
+
+  <pre>git commit -m "awesome marketing text"</pre>
+
+  <div class="details">
+    <p>Commits are created along with a log message which describes the changes made in that commit.</p>
+    <img src="images/gifs/status-add-commit.gif" alt="git add"></img>
+  </div>
+
+  <h1>Updating a repository</h1>
+  <pre>git pull origin</pre>
+  <h1>Sharing changes</h1>
+  <pre>git push origin</pre>
