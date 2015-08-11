@@ -2,26 +2,34 @@
 layout: default
 ---
 
+  <h1>Table of contents</h1>
+  <ul>
+    <li><a href="#basics">Basics</a></li>
+    <li><a href="#record">Record</a></li>
+    <li><a href="#update">Update</a></li>
+    <li><a href="#share">Share</a></li>
+    <li><a href="#merge">Merge</a></li>
+    <li><a href="#undo">Undo</a></li>
+  </ul>
+
   <div class="details">
+    <a class="anchor" href name="basics"></a>
     <h1>Basics:</h1>
 
-    <p>git workflows can be divided into these categories:</p>
+    <p>git workflows can be divided into these main categories:</p>
 
     <ul>
-      <li><a href="#recording">Recording</a> - save the changes in your repository in a new commit along with a log message describing the changes.</li>
-      <li><a href="#updating">Updating</a> - communicate with a remote repository, fetch down all new information and store it.</li>
-      <li><a href="#sharing">Sharing</a> - upload your changes with to a remote repository.</li>
+      <li><a href="#recording">Recording</a> - save the changes in your repository.</li>
+      <li><a href="#updating">Updating</a> - fetch down all new information from a remote repository and store it.</li>
+      <li><a href="#sharing">Sharing</a> - store your changes in a remote repository.</li>
     </ul>
 
-    <p>If you don't have access to any git repository you create a fresh one to play around with. Open up the terminal and create a new directory:</p>
+    <p>If you don't have access to any git repository just create a fresh one to play around with. Create and open up a new directory:</p>
 
-    <pre>mkdir cats</pre>
+    <pre>mkdir cats
+cd cats</pre>
 
-    <p>after entering</p>
-
-    <pre>cd cats</pre>
-
-    <p>initialize a new git repository:</p>
+    <p>then initialize a new git repository with:</p>
 
     <pre>git init</pre>
 
@@ -30,27 +38,24 @@ layout: default
     <img src="images/gifs/init.gif" alt="git init"></img>
   </div>
 
-  <a class="anchor" href name="recording"></a>
+  <a class="anchor" href name="record"></a>
   <h1>Recording changes</h1>
 
   <div class="details">
-    <p>Time to make some changes! Let's say you changed a webpage. Typing git status will always show you the current status of your working directory.</p>
+    <p>You already made some changes to a webpage in this git repository. Typing <code>git status</code> will always show you the current status of your working directory:</p>
     <pre>git status</pre>
   </div>
 
 
   <div class="details">
-    <p>As you see git already knows that index.html is changed. Let's save your modifications!</p>
-    <p>In order to save modifications you have to create a commit. Putting together a git commit is just like shopping. You decide what goes into your shopping basked and what doesn't.</p>
-    <p>Use <code>git add</code> to put a changed file into your commit:</p>
+    <p>git knows that index.html is changed and it's ready to save your modifications.</p>
+    <p>To do that, you have to create a commit. Putting together a git commit is like shopping where the commit is your shopping cart. You carefully look at the available items and decide what goes into your shopping cart and what doesn't.</p>
   </div>
 
+  <p>Use <code>git add</code> to put a modified file into your commit:</p>
   <pre>git add index.html</pre>
 
-  <div class="details">
-    <p>The commit is wrapper and now we are ready to record the selected changes.</p>
-  </div>
-
+  <p>If you don't want to add anything else, record the selected modifications:</p>
   <pre>git commit -m "awesome marketing text"</pre>
 
   <div class="details">
@@ -58,7 +63,26 @@ layout: default
     <img src="images/gifs/status-add-commit.gif" alt="git add"></img>
   </div>
 
-  <h1>Updating a repository</h1>
+  <a class="anchor" href name="update"></a>
+  <h1>Update</h1>
+  <div class="details">
+  </div>
   <pre>git pull origin</pre>
-  <h1>Sharing changes</h1>
+
+  <a class="anchor" href name="share"></a>
+  <h1>Share</h1>
+  <div class="details">
+  </div>
   <pre>git push origin</pre>
+
+  <a class="anchor" href name="merge"></a>
+  <h1>Merge</h1>
+  <div class="details">
+  </div>
+  <pre>git merge new-feature</pre>
+
+  <a class="anchor" href name="undo"></a>
+  <h1>Undo</h1>
+  <div class="details">
+  </div>
+  <pre>git reset HEAD~1</pre>

@@ -1,7 +1,20 @@
-$('#simplified').on('click', function (e) {
-  e.preventDefault();
+(function () {
+  var simple = false;
 
-  $('div.details').slideToggle();
+  $('#simpleon').on('click', function (e) {
+    var span = $(e.currentTarget);
 
+    e.preventDefault();
 
-});
+    $('div.details').slideToggle();
+
+    if (simple) {
+      span.text("Simplified view: Off");
+    } else {
+      span.text("Simplified view: On");
+    }
+
+    // not so simple
+    simple = !simple;
+  });
+})();
