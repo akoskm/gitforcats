@@ -1,2 +1,2 @@
-# applied-git
+# git for cats
 Basic git workflow tutorials.
