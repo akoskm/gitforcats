@@ -1,5 +1,5 @@
 # git for cats
-Basic git workflow tutorials.
+Basic git workflow tutorials. Inspired by http://jsforcats.com/.
 
 # Contributing
 We have plenty of stuff to do, take a look at [Issues](https://github.com/akoskm/gitforcats/issues)
