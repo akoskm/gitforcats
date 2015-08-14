@@ -50,7 +50,8 @@ $card-height:      200px;
 @import
         "base",
         "layout",
-        "syntax-highlighting"
+        "syntax-highlighting",
+        "toggle"
 ;
 
 /*footer*/
@@ -64,11 +65,6 @@ footer {
 
 footer > div {
   padding-bottom: 20px;
-}
-
-header span {
-  cursor: pointer;
-  color: $grey-color-light;
 }
 
 .table-wrapper {
