@@ -65,13 +65,44 @@ cd cats</pre>
 
   <a class="anchor" href name="update"></a>
   <h1>Update</h1>
+  <pre>git pull &lt;remote&gt; &lt;branch&gt;</pre>
   <div class="details">
+    <p>
+      This is one of the concepts git uses to distribute content. It will incorporate the changes made by others into your local repository. To make your repository up to date with the remote repository, use:
+    </p>
+    <pre>git pull</pre>
+    <p>When <code>&lt;remote&gt;</code> isn't specified, <code>origin</code> is used. So the equivalent of the above command would be:</p>
+    <pre>git pull origin</pre>
+    <p>Specifing <code>&lt;branch&gt;</code> will pull the changes from that branch into your current branch. To pull the changes from branch <code>awesome-feature-23</code> to your local branch do:</p>
+    <pre>git pull origin awesome-feature-23</pre>
   </div>
-  <pre>git pull origin</pre>
+  <h2>Common errors</h2>
+    <pre>
+From /a/remote/repository
+  * branch            master     -> FETCH_HEAD
+error: Untracked working tree file 'myproject/example.js' would be overwritten by merge.  Aborting
+    </pre>
+
+    <div class="details">
+      <p>Another error message caused by the same problem:
+    </div>
+
+    <pre>
+From /a/remote/repository
+  * branch            master     -> FETCH_HEAD
+error: Your local changes to 'foo.txt' would be overwritten by merge. Aborting. Please, commit your changes or stash them before you can merge.
+    </pre>
+
+    <p>Both errors indicate that you have some unsaved changes that would be overwritten by the modifications made by others to the same file.</p>
+    <p>As a solution, commit your changes, then repeat the pull.</p>
+
 
   <a class="anchor" href name="share"></a>
   <h1>Share</h1>
   <div class="details">
+    <p>
+      Like other contributors of the repository, you also want to share your changes with others. Use <code>git push</code> to update the remote repository with your changes.
+    </p>
   </div>
   <pre>git push origin</pre>
 
