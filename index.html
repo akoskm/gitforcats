@@ -5,11 +5,10 @@ layout: default
   <h1>Table of contents</h1>
   <ul>
     <li><a href="#basics">Basics</a></li>
-    <li><a href="#record">Recording</a></li>
-    <li><a href="#update">Update</a></li>
-    <li><a href="#share">Share</a></li>
-    <li><a href="#merge">Merge</a></li>
-    <li><a href="#undo">Undo</a></li>
+    <li><a href="#record">Store</a></li>
+    <li><a href="#update">Fetch</a></li>
+    <li><a href="#share">Update</a></li>
+    <li><a href="#undo">Oops!</a></li>
   </ul>
 
   <div class="details">
@@ -19,9 +18,9 @@ layout: default
     <p>Git workflows can be divided into these main categories:</p>
 
     <ul>
-      <li><a href="#record">Recording</a> - save the changes in your repository.</li>
-      <li><a href="#update">Updating</a> - fetch down all new information from a remote repository and store it.</li>
-      <li><a href="#share">Sharing</a> - store your changes in a remote repository.</li>
+      <li><a href="#record">Store</a> - save the changes in your repository.</li>
+      <li><a href="#update">Fetch</a> - integrate the changes from a remote repository to another repository.</li>
+      <li><a href="#share">Update</a> - store your changes in a remote repository.</li>
     </ul>
 
     <p>If you don't have access to any git repository just create a fresh one to play around with. Create and open up a new directory:</p>
@@ -39,7 +38,7 @@ cd cats</pre>
   </div>
 
   <a class="anchor" href name="record"></a>
-  <h1>Recording</h1>
+  <h1>Store</h1>
 
   <div class="details">
     <p>You already made some changes to a webpage in this git repository. Typing <code>git status</code> will always show you the current status of your working directory:</p>
@@ -48,14 +47,14 @@ cd cats</pre>
 
 
   <div class="details">
-    <p>Git knows that index.html is changed and it's ready to save your modifications.</p>
-    <p>To do that, you have to create a commit. Putting together a git commit is like shopping where the commit is your shopping cart. You carefully look at the available items and decide what goes into your shopping cart and what doesn't.</p>
+    <p>Git is aware that index.html is changed and there are modifications to save. To do that, you have to create a commit. A single commit can contain multiple changes.</p>
   </div>
 
   <p>Use <code>git add</code> to put a modified file into your commit:</p>
   <pre>git add index.html</pre>
 
-  <p>If you don't want to add anything else, record the selected modifications:</p>
+  <p>If you want to include multiple files just repeat <code>git add</code> for every file you want to include in this commit.</p>
+  <p>Finally, store the selected modifications:</p>
   <pre>git commit -m "awesome text"</pre>
 
   <div class="details">
@@ -64,11 +63,11 @@ cd cats</pre>
   </div>
 
   <a class="anchor" href name="update"></a>
-  <h1>Update</h1>
+  <h1>Fetch</h1>
   <pre>git pull &lt;remote&gt; &lt;branch&gt;</pre>
   <div class="details">
     <p>
-      This is one of the concepts git uses to distribute content. It will incorporate the changes made by others into your local repository. To make your repository up to date with the remote repository, use:
+      This is one of the concepts git uses to distribute content. This command will incorporate the changes from a remote repository (remote) to your local copy of the remote repository. To make your repository up to date with the remote repository, use:
     </p>
     <pre>git pull</pre>
     <p>When <code>&lt;remote&gt;</code> isn't specified, <code>origin</code> is used. So the equivalent of the above command would be:</p>
@@ -94,26 +93,30 @@ error: Your local changes to 'foo.txt' would be overwritten by merge. Aborting. 
     </pre>
 
     <p>Both errors indicate that you have some unsaved changes that would be overwritten by the modifications made by others to the same file.</p>
-    <p>As a solution, commit your changes, then repeat the pull.</p>
+    <p>As a solution, commit your changes, then repeat <code>git pull</code>.</p>
 
 
   <a class="anchor" href name="share"></a>
   <h1>Share</h1>
   <div class="details">
     <p>
-      Like other contributors of the repository, you also want to share your changes with others. Use <code>git push</code> to update the remote repository with your changes.
+      Like other contributors of a repository, you probably want to share your changes with others. Use <code>git push</code> to update the remote repository with your changes.
     </p>
   </div>
   <pre>git push origin</pre>
 
-  <a class="anchor" href name="merge"></a>
-  <h1>Merge</h1>
-  <div class="details">
-  </div>
-  <pre>git merge new-feature</pre>
-
   <a class="anchor" href name="undo"></a>
-  <h1>Undo</h1>
-  <div class="details">
-  </div>
-  <pre>git reset HEAD~1</pre>
+  <h1>Oops!</h1>
+    <p>There is a typo in your last commit message and you want to correct it:</p>
+    <pre>git commit --amend</pre>
+    <div class="details">
+      <p>Note that this won't work if you already pushed this commit to the remote repository.</p>
+    </div>
+
+    <p>You already created a commit and forgot to include all the files you wanted. Reset your previous commit by:</p>
+    <pre>git reset HEAD~1</pre>
+    <div class="details">
+      <p>You'll still have the changes made in this commit, only the files become uncommited.
+      Repeat <code>git add</code> and <code>git commit</code> to create a new commit.
+      Won't work if you already pushed this commit to the remote repository.</p>
+    </div>
