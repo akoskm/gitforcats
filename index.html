@@ -41,7 +41,7 @@ cd cats</pre>
   <h1>Store</h1>
 
   <div class="details">
-    <p>You already made some changes to a webpage in this git repository. Typing <code>git status</code> will always show you the current status of your working directory:</p>
+    <p>Let's say you made some changes to index.html page in your git repository. Typing <code>git status</code> will always show you the current status of your working directory:</p>
     <pre>git status</pre>
   </div>
 
@@ -55,7 +55,7 @@ cd cats</pre>
 
   <p>If you want to include multiple files just repeat <code>git add</code> for every file you want to include in this commit.</p>
   <p>Finally, store the selected modifications:</p>
-  <pre>git commit -m "awesome text"</pre>
+  <pre>git commit -m "my first log message"</pre>
 
   <div class="details">
     <p>Commits are created along with a log message which describes the changes made in that commit.</p>
@@ -67,7 +67,7 @@ cd cats</pre>
   <pre>git pull &lt;remote&gt; &lt;branch&gt;</pre>
   <div class="details">
     <p>
-      This is one of the concepts git uses to distribute content. This command will incorporate the changes from a remote repository (remote) to your local copy of the remote repository. To make your repository up to date with the remote repository, use:
+      This is one of the concepts which git uses to distribute content. This command will incorporate the changes from a remote repository (remote) to your local copy of the remote repository. To make your repository up to date with the remote repository, use:
     </p>
     <pre>git pull</pre>
     <p>When <code>&lt;remote&gt;</code> isn't specified, <code>origin</code> is used. So the equivalent of the above command would be:</p>
@@ -75,7 +75,8 @@ cd cats</pre>
     <p>Specifing <code>&lt;branch&gt;</code> will pull the changes from that branch into your current branch. To pull the changes from branch <code>awesome-feature-23</code> to your local branch do:</p>
     <pre>git pull origin awesome-feature-23</pre>
   </div>
-  <h3>Common errors</h3>
+  <h2>Common errors</h2>
+    <p>If you are working on the same project with other contributors  (people or cats) you may get these errors after <code>git pull</code>:</p>
     <pre>
 From /a/remote/repository
   * branch            master     -> FETCH_HEAD
@@ -94,6 +95,7 @@ error: Your local changes to 'foo.txt' would be overwritten by merge. Aborting. 
 
     <p>Both errors indicate that you have some unsaved changes that would be overwritten by the modifications made by others to the same file.</p>
     <p>As a solution, commit your changes, then repeat <code>git pull</code>.</p>
+    <p>Sleeping less than 16 hours a day, also a common error in feline species.</p>
 
 
   <a class="anchor" href name="share"></a>
@@ -107,12 +109,13 @@ error: Your local changes to 'foo.txt' would be overwritten by merge. Aborting. 
 
   <a class="anchor" href name="undo"></a>
   <h1>Oops!</h1>
+  <h2>Edit log message</h2>
     <p>There is a typo in your last commit message and you want to correct it:</p>
     <pre>git commit --amend</pre>
     <div class="details">
       <p>Note that this won't work if you already pushed this commit to the remote repository.</p>
     </div>
-
+  <h2>Reset previous commit</h2>
     <p>You already created a commit and forgot to include all the files you wanted. Reset your previous commit by:</p>
     <pre>git reset HEAD~1</pre>
     <div class="details">
