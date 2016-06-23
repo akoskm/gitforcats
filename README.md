@@ -1,10 +1,10 @@
 # git for cats
-Basic git workflow tutorials. Inspired by http://jsforcats.com/.
+Basic git workflow tutorials. Inspired by http://jsforcats.com/. Meant for junior developers. 
 
 # Contributing
 
 ## Philosophy
-This learning material is meant for cats, so please keep the technical jargon to minimum. Be simple and accurate.
+This learning material should be simple, so please keep the technical jargon to minimum. Be simple and accurate.
 
 ## Development
 The site is generated with [jekyll](http://jekyllrb.com/).
